@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Salma & Omar Wedding</title>
+
+<style>
+
+  body {
+
+    margin: 0;
+
+    font-family: 'Georgia', serif;
+
+    background: linear-gradient(to top, #fce4ec, #ffffff);
+
+    text-align: center;
+
+    overflow: hidden;
+
+  }
+
+  .container {
+
+    margin-top: 80px;
+
+    animation: fadeIn 2s ease-in-out;
+
+  }
+
+  h1 {
+
+    font-size: 50px;
+
+    color: #b76e79;
+
+  }
+
+  h2 {
+
+    font-size: 28px;
+
+    color: #444;
+
+  }
+
+  p {
+
+    font-size: 20px;
+
+    color: #666;
+
+  }
+
+  #countdown {
+
+    font-size: 26px;
+
+    margin-top: 20px;
+
+    color: #b76e79;
+
+    font-weight: bold;
+
+  }
+
+  .heart {
+
+    position: absolute;
+
+    bottom: -20px;
+
+    color: #ff6b81;
+
+    animation: floatUp linear infinite;
+
+  }
+
+  @keyframes fadeIn {
+
+    from {opacity: 0;}
+
+    to {opacity: 1;}
+
+  }
+
+  @keyframes floatUp {
+
+    0% {
+
+      transform: translateY(0);
+
+      opacity: 1;
+
+    }
+
+    100% {
+
+      transform: translateY(-110vh);
+
+      opacity: 0;
+
+    }
+
+  }
+
+  button {
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    background: #b76e79;
+
+    color: white;
+
+    border-radius: 25px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>You’re Invited 💌</h2>
+
+  <h1>Salma & Omar</h1>
+
+  <p>Join us to celebrate our special day</p>
+
+  <p>20 June 2026 - 7:00 PM</p>
+
+  <div id="countdown"></div>
+
+  <button onclick="alert('Location will be shared soon 💍')">
+
+    View Location 📍
+
+  </button>
+
+</div>
+
+<script>
+
+  // COUNTDOWN
+
+  const weddingDate = new Date("June 20, 2026 19:00:00").getTime();
+
+  setInterval(() => {
+
+    const now = new Date().getTime();
+
+    const diff = weddingDate - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("countdown").innerHTML =
+
+      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+  }, 1000);
+
+  // FLOATING HEARTS (continuous)
+
+  function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML = "❤";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+
+    heart.style.animationDuration = (Math.random() * 4 + 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+
+      heart.remove();
+
+    }, 8000);
+
+  }
+
+  setInterval(createHeart, 300); // كل شوية قلب جديد
+
+</script>
+
+</body>
+
+</html>
