@@ -1,186 +1,169 @@
+‏<!DOCTYPE html>
 
-<!DOCTYPE html>
+‏<html lang="en">
 
-<html lang="en">
+‏<head>
 
-<head>
+‏<meta charset="UTF-8">
 
-<meta charset="UTF-8">
+‏<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+‏<title>Anniversary</title>
 
-<title>Anniversary</title>
+‏<style>
 
-<style>
+‏html, body {
 
-body {
+‏    margin: 0;
 
-    margin: 0;
+‏    height: 100%;
 
-    min-height: 100vh;
+‏    overflow: hidden;
 
-    overflow: hidden;
+‏    font-family: Arial, sans-serif;
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-family: Arial, sans-serif;
-
-    color: #fff;
-
-    /* ❤️ أحمر هادي رومانسي */
-
-    background: linear-gradient(135deg, #8b1e3f, #c2185b, #5a0f2c);
+‏    color: white;
 
 }
 
-/* لمعة خفيفة */
+‏/* ❤️ BACKGROUND مضمون */
 
-body::before {
+‏body {
 
-    content: "";
+‏    background: linear-gradient(135deg, #7a0f2e, #c2185b, #3b0a1e) !important;
 
-    position: absolute;
+‏    display: flex;
 
-    width: 400px;
+‏    justify-content: center;
 
-    height: 400px;
-
-    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
-
-    top: -80px;
-
-    left: -80px;
-
-    animation: glow 6s ease-in-out infinite alternate;
+‏    align-items: center;
 
 }
 
-@keyframes glow {
+‏/* glow */
 
-    from { transform: translateY(0px); }
+‏body::before {
 
-    to { transform: translateY(40px); }
+‏    content: "";
 
-}
+‏    position: absolute;
 
-.container {
+‏    width: 500px;
 
-    text-align: center;
+‏    height: 500px;
 
-    max-width: 650px;
+‏    background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%);
 
-    padding: 25px;
+‏    top: -100px;
 
-    z-index: 2;
-
-    background: rgba(255,255,255,0.1);
-
-    border-radius: 20px;
-
-    backdrop-filter: blur(10px);
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+‏    left: -100px;
 
 }
 
-h1 {
+‏/* container */
 
-    margin-bottom: 10px;
+‏.container {
 
-}
+‏    text-align: center;
 
-.message p {
+‏    max-width: 700px;
 
-    line-height: 1.7;
+‏    padding: 25px;
 
-    margin: 10px 0;
+‏    background: rgba(255,255,255,0.08);
 
-}
+‏    border-radius: 20px;
 
-/* تيشرت */
+‏    backdrop-filter: blur(10px);
 
-.tshirt {
+‏    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 
-    margin-top: 20px;
-
-    padding: 15px;
-
-    border: 2px dashed rgba(255,255,255,0.6);
-
-    border-radius: 15px;
-
-    font-size: 1.1rem;
+‏    z-index: 2;
 
 }
 
-.small {
+‏h1 {
 
-    font-size: 0.9rem;
-
-    opacity: 0.9;
-
-    margin-top: 5px;
+‏    margin-bottom: 15px;
 
 }
 
-/* heart */
+‏/* text */
 
-.heart {
+‏.message p {
 
-    font-size: 40px;
+‏    margin: 10px 0;
 
-    animation: beat 1s infinite alternate;
-
-}
-
-@keyframes beat {
-
-    to { transform: scale(1.2); }
+‏    line-height: 1.7;
 
 }
 
-</style>
+‏/* tshirt */
 
-</head>
+‏.tshirt {
 
-<body>
+‏    margin-top: 20px;
 
-<div class="container">
+‏    padding: 15px;
 
-    <div class="heart">❤</div>
+‏    border: 2px dashed rgba(255,255,255,0.7);
 
-    <h1>Happy Anniversary!</h1>
+‏    border-radius: 15px;
 
-    <div class="message">
+}
 
-        <p>Every year, you are my husband — my love and my safety.</p>
+‏/* heart */
 
-        <p>Every year, you are my dream and my wish come true.</p>
+‏.heart {
 
-        <p>Every year, you are my life and the most amazing man in the world.</p>
+‏    font-size: 45px;
 
-        <p>May we have many beautiful years together and grow together.</p>
+‏    animation: beat 1s infinite alternate;
 
-        <p>May our next anniversary be in our home, with an even more beautiful celebration.</p>
+}
 
-        <p>And may God bless us with the most beautiful children.</p>
+‏@keyframes beat {
 
-    </div>
+‏    to { transform: scale(1.2); }
 
-    <div class="tshirt">
+}
 
-        <b>Always & Forever My Love</b>
+‏</style>
 
-        <div class="small">Read the first letter of each sentence → Always & forever</div>
+‏</head>
 
-    </div>
+‏<body>
 
-</div>
+‏<div class="container">
 
-</body>
+‏    <div class="heart">❤</div>
 
-</html>
+‏    <h1>Happy Anniversary!</h1>
+
+‏    <div class="message">
+
+‏        <p>Every year, you are my husband — my love and my safety.</p>
+
+‏        <p>Every year, you are my dream and my wish come true.</p>
+
+‏        <p>Every year, you are my life and the most amazing man in the world.</p>
+
+‏        <p>May we have many beautiful years together and grow together.</p>
+
+‏        <p>May our next anniversary be in our home, with an even more beautiful celebration.</p>
+
+‏        <p>And may God bless us with the most beautiful children.</p>
+
+‏    </div>
+
+‏    <div class="tshirt">
+
+‏        <b>Always & Forever My Love</b><br>>
+
+‏    </div>
+
+‏</div>
+
+‏</body>
+
+‏</html>
