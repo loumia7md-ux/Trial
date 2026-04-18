@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Anniversary</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    
     <style>
         body {
             margin: 0;
             height: 100vh;
             overflow: hidden;
-            /* الخط الأساسي Quicksand وخط العناوين Dancing Script */
-            font-family: 'Quicksand', sans-serif;
+            /* تم تكبير الخط الأساسي هنا */
+            font-family: 'Montserrat', sans-serif; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,57 +29,51 @@
         }
 
         .card {
-            max-width: 850px;
-            padding: 30px;
+            max-width: 90%;
+            padding: 40px;
             z-index: 2;
-            background: rgba(255, 255, 255, 0.1); /* خلفية خفيفة خلف النص لزيادة الوضوح */
-            border-radius: 20px;
-            backdrop-filter: blur(5px);
+            background: rgba(0, 0, 0, 0.15); /* تظليل خلف النص لإبرازه */
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         h1 {
-            font-family: 'Dancing Script', cursive; /* خط رومانسي للعناوين */
-            font-size: 70px; /* تكبير العنوان */
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            /* خط "Great Vibes" رومانسي جداً ومختلف تماماً */
+            font-family: 'Great Vibes', cursive;
+            font-size: 90px; /* حجم ضخم للعنوان */
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
         }
 
         .date {
-            font-size: 28px; /* تكبير التاريخ */
-            margin-bottom: 35px;
-            opacity: 0.9;
-            letter-spacing: 2px;
+            font-size: 35px; /* تكبير التاريخ */
+            margin-bottom: 40px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            display: block;
         }
 
         p {
-            font-size: 28px; /* تكبير نصوص الفقرات */
-            line-height: 1.6;
-            margin: 15px 0;
-            font-weight: 500;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            font-size: 32px; /* تكبير نصوص الرسالة جداً */
+            line-height: 1.8;
+            margin: 20px 0;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
         }
 
-        /* flying kiss */
         .kiss {
             position: absolute;
-            font-size: 35px;
             animation: floatUp 6s linear infinite;
             opacity: 0;
             pointer-events: none;
+            z-index: 1;
         }
 
         @keyframes floatUp {
-            0% {
-                transform: translateY(100vh) scale(0.6);
-                opacity: 0;
-            }
-            20% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-10vh) scale(1.3);
-                opacity: 0;
-            }
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+            20% { opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
         }
     </style>
 </head>
@@ -86,7 +81,7 @@
 
 <div class="card">
     <h1>Happy Anniversary my love 🫀</h1>
-    <div class="date">3.5.2026</div>
+    <span class="date">3.5.2026</span>
     <p>Every year, you are my husband — my love and my safety.</p>
     <p>Every year, you are my dream and my wish come true.</p>
     <p>Every year, you are my life and the most amazing man in the world.</p>
@@ -102,11 +97,9 @@
         kiss.innerText = "💋";
         kiss.style.left = Math.random() * 100 + "vw";
         kiss.style.animationDuration = (3 + Math.random() * 3) + "s";
-        kiss.style.fontSize = (30 + Math.random() * 30) + "px";
+        kiss.style.fontSize = (30 + Math.random() * 40) + "px";
         document.body.appendChild(kiss);
-        setTimeout(() => {
-            kiss.remove();
-        }, 6000);
+        setTimeout(() => { kiss.remove(); }, 6000);
     }
     setInterval(createKiss, 300);
 </script>
