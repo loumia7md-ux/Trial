@@ -1,161 +1,94 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Special Anniversary</title>
+    <style>
+        :root {
+            --primary-color: #d4a373; /* لون خشبي فاتح هادي */
+            --text-color: #5b4636;
+            --bg-color: #fefae0;
+        }
 
-<meta charset="UTF-8">
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            color: var(--text-color);
+        }
 
-<title>Salma & Omar Wedding</title>
+        .container {
+            padding: 20px;
+            max-width: 500px;
+            animation: fadeIn 2s ease-in;
+        }
 
-<style>
+        .date {
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
 
-  body {
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
 
-    margin: 0;
+        .message {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
 
-    font-family: 'Georgia', serif;
+        .heart {
+            color: #bc6c25;
+            font-size: 30px;
+            animation: beat 1s infinite alternate;
+            margin: 20px 0;
+        }
 
-    background: linear-gradient(to top, #fce4ec, #ffffff);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    text-align: center;
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
 
-    overflow: hidden;
-
-  }
-
-  .container {
-
-    margin-top: 100px;
-
-    animation: fadeIn 2s ease-in-out;
-
-  }
-
-  h1 {
-
-    font-size: 50px;
-
-    color: #b76e79;
-
-  }
-
-  h2 {
-
-    font-size: 28px;
-
-    color: #444;
-
-  }
-
-  p {
-
-    font-size: 20px;
-
-    color: #666;
-
-  }
-
-  .heart {
-
-    position: absolute;
-
-    color: #ff6b81;
-
-    animation: float 6s infinite;
-
-  }
-
-  @keyframes fadeIn {
-
-    from {opacity: 0;}
-
-    to {opacity: 1;}
-
-  }
-
-  @keyframes float {
-
-    0% {transform: translateY(100vh);}
-
-    100% {transform: translateY(-10vh);}
-
-  }
-
-  button {
-
-    margin-top: 20px;
-
-    padding: 12px 25px;
-
-    border: none;
-
-    background: #b76e79;
-
-    color: white;
-
-    border-radius: 25px;
-
-    font-size: 16px;
-
-    cursor: pointer;
-
-  }
-
-</style>
-
+        .footer-note {
+            font-style: italic;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <div class="container">
+        <div class="date">03 . 05 . 2025</div>
+        <div class="heart">❤</div>
+        <h1>Happy Anniversary!</h1>
+        
+        <div class="message">
+            <p>Every year, you are my man, my safety, and the most beautiful person in my life.</p>
+            <p>Every year we are together, and every year we grow together.</p>
+            <p>I hope we have the most beautiful babies in the world.</p>
+            <p>Inshallah, the next anniversary will be in our home, with another special celebration.</p>
+        </div>
 
-  <h2>You’re Invited 💌</h2>
-
-  <h1>Salma & Omar</h1>
-
-  <p>Join us to celebrate our special day</p>
-
-  <p>20 June 2026</p>
-
-  <p>7:00 PM</p>
-
-  <button onclick="alert('Location will be shared soon 💍')">
-
-    View Location 📍
-
-  </button>
-
-</div>
-
-<script>
-
-  function createHearts() {
-
-    for (let i = 0; i < 20; i++) {
-
-      let heart = document.createElement("div");
-
-      heart.className = "heart";
-
-      heart.innerHTML = "❤";
-
-      heart.style.left = Math.random() * 100 + "vw";
-
-      heart.style.fontSize = (Math.random() * 20 + 10) + "px";
-
-      heart.style.animationDuration = (Math.random() * 5 + 3) + "s";
-
-      document.body.appendChild(heart);
-
-    }
-
-  }
-
-  createHearts();
-
-</script>
+        <div class="footer-note">Forever & Always</div>
+    </div>
 
 </body>
-
 </html>
