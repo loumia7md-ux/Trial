@@ -1,94 +1,237 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Special Anniversary</title>
-    <style>
-        :root {
-            --primary-color: #d4a373; /* لون خشبي فاتح هادي */
-            --text-color: #5b4636;
-            --bg-color: #fefae0;
-        }
 
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: var(--bg-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            color: var(--text-color);
-        }
+<meta charset="UTF-8">
 
-        .container {
-            padding: 20px;
-            max-width: 500px;
-            animation: fadeIn 2s ease-in;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .date {
-            font-size: 1.5rem;
-            letter-spacing: 5px;
-            font-weight: 300;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
+<title>Our Special Anniversary</title>
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
+<style>
 
-        .message {
-            line-height: 1.8;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
+:root {
 
-        .heart {
-            color: #bc6c25;
-            font-size: 30px;
-            animation: beat 1s infinite alternate;
-            margin: 20px 0;
-        }
+    --primary-color: #d4a373;
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    --text-color: #5b4636;
 
-        @keyframes beat {
-            to { transform: scale(1.2); }
-        }
+    --bg-color: #fefae0;
 
-        .footer-note {
-            font-style: italic;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-    </style>
+}
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-color: var(--bg-color);
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    text-align: center;
+
+    color: var(--text-color);
+
+    overflow: hidden;
+
+}
+
+.container {
+
+    padding: 20px;
+
+    max-width: 600px;
+
+    animation: fadeIn 2s ease-in;
+
+}
+
+.date {
+
+    font-size: 1.3rem;
+
+    letter-spacing: 4px;
+
+    color: var(--primary-color);
+
+}
+
+h1 {
+
+    font-size: 2.2rem;
+
+    margin: 10px 0;
+
+}
+
+.message p {
+
+    line-height: 1.8;
+
+    font-size: 1.05rem;
+
+}
+
+/* T-shirt acrostic style */
+
+.tshirt {
+
+    margin: 25px 0;
+
+    padding: 15px;
+
+    border: 2px dashed var(--primary-color);
+
+    border-radius: 15px;
+
+    background: #fffaf0;
+
+}
+
+.tshirt h2 {
+
+    margin-bottom: 10px;
+
+    font-size: 1.2rem;
+
+    color: var(--primary-color);
+
+}
+
+.acrostic {
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    font-size: 1.1rem;
+
+}
+
+/* Heart */
+
+.heart {
+
+    font-size: 30px;
+
+    animation: beat 1s infinite alternate;
+
+    margin: 15px 0;
+
+}
+
+/* Kiss animation */
+
+.kiss {
+
+    position: absolute;
+
+    font-size: 20px;
+
+    animation: floatUp 4s linear infinite;
+
+    opacity: 0;
+
+}
+
+@keyframes floatUp {
+
+    0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+
+    20% { opacity: 1; }
+
+    100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+
+}
+
+@keyframes fadeIn {
+
+    from { opacity: 0; transform: translateY(20px); }
+
+    to { opacity: 1; transform: translateY(0); }
+
+}
+
+@keyframes beat {
+
+    to { transform: scale(1.2); }
+
+}
+
+.footer {
+
+    font-style: italic;
+
+    margin-top: 15px;
+
+    opacity: 0.8;
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <div class="container">
-        <div class="date">03 . 05 . 2025</div>
-        <div class="heart">❤</div>
-        <h1>Happy Anniversary!</h1>
-        
-        <div class="message">
-            <p>Every year, you are my man, my safety, and the most beautiful person in my life.</p>
-            <p>Every year we are together, and every year we grow together.</p>
-            <p>I hope we have the most beautiful babies in the world.</p>
-            <p>Inshallah, the next anniversary will be in our home, with another special celebration.</p>
-        </div>
+<!-- floating kisses -->
 
-        <div class="footer-note">Forever & Always</div>
+<div class="kiss" style="left:10%;">💋</div>
+
+<div class="kiss" style="left:30%; animation-delay:1s;">💋</div>
+
+<div class="kiss" style="left:60%; animation-delay:2s;">💋</div>
+
+<div class="kiss" style="left:80%; animation-delay:1.5s;">💋</div>
+
+<div class="container">
+
+    <div class="date">03 . 05 . 2025</div>
+
+    <div class="heart">❤</div>
+
+    <h1>Happy Anniversary!</h1>
+
+    <div class="message">
+
+        <p>Every year, you are my husband — my love and my safety.</p>
+
+        <p>Every year, you are my dream and my wish come true.</p>
+
+        <p>Every year, you are my life and the most amazing man in the world.</p>
+
+        <p>May we have many beautiful years together and grow together .</p>
+
+        <p>May our next anniversary be in our home, with an even more beautiful celebration.</p>
+
+        <p>And may God bless us with the most beautiful children.</p>
+
     </div>
 
+    <div class="tshirt">
+
+        <h2>T-SHIRT MESSAGE</h2>
+
+        <div class="acrostic">Always & Forever My Love</div>
+
+    </div>
+
+    <div class="footer">Forever & Always ❤️</div>
+
+</div>
+
 </body>
+
 </html>
