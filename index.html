@@ -1,88 +1,81 @@
-‏<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Anniversary</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            overflow: hidden;
-            /* تم تكبير الخط الأساسي هنا */
-            font-family: 'Montserrat', sans-serif; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            background: linear-gradient(-45deg, #ff4d6d, #ff758f, #ffb3c1, #c9184a);
-            background-size: 400% 400%;
-            animation: bg 10s ease infinite;
-        }
+<meta charset="UTF-8">
+<title>Anniversary</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Tajawal:wght@700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        background: linear-gradient(-45deg, #ff4d6d, #ff758f, #ffb3c1, #c9184a);
+        background-size: 400% 400%;
+        animation: bg 10s ease infinite;
+    }
 
-        @keyframes bg {
-            0% {background-position:0% 50%;}
-            50% {background-position:100% 50%;}
-            100% {background-position:0% 50%;}
-        }
+    @keyframes bg {
+        0% {background-position:0% 50%;}
+        50% {background-position:100% 50%;}
+        100% {background-position:0% 50%;}
+    }
 
-        .card {
-            max-width: 90%;
-            padding: 40px;
-            z-index: 2;
-            background: rgba(0, 0, 0, 0.15); /* تظليل خلف النص لإبرازه */
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
+    .card {
+        max-width: 800px;
+        padding: 30px;
+        z-index: 2;
+    }
 
-        h1 {
-            /* خط "Great Vibes" رومانسي جداً ومختلف تماماً */
-            font-family: 'Great Vibes', cursive;
-            font-size: 90px; /* حجم ضخم للعنوان */
-            margin-bottom: 20px;
-            color: #fff;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
-        }
+    h1 {
+        /* هنا تغيير نوع الخط للعنوان ليكون واضحاً وعريضاً */
+        font-family: 'Pacifico', cursive;
+        font-size: 85px; 
+        margin-bottom: 10px;
+        text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+        font-weight: normal;
+    }
 
-        .date {
-            font-size: 35px; /* تكبير التاريخ */
-            margin-bottom: 40px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            display: block;
-        }
+    .date {
+        font-size: 26px;
+        margin-bottom: 25px;
+        opacity: 0.9;
+        font-weight: bold;
+    }
 
-        p {
-            font-size: 32px; /* تكبير نصوص الرسالة جداً */
-            line-height: 1.8;
-            margin: 20px 0;
-            font-weight: 600;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-        }
+    p {
+        font-size: 24px;
+        line-height: 1.7;
+        margin: 12px 0;
+        font-weight: 500;
+    }
 
-        .kiss {
-            position: absolute;
-            animation: floatUp 6s linear infinite;
-            opacity: 0;
-            pointer-events: none;
-            z-index: 1;
-        }
+    .kiss {
+        position: absolute;
+        font-size: 35px;
+        animation: floatUp 6s linear infinite;
+        opacity: 0;
+        pointer-events: none;
+    }
 
-        @keyframes floatUp {
-            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
-            20% { opacity: 1; }
-            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
-        }
-    </style>
+    @keyframes floatUp {
+        0% { transform: translateY(100vh) scale(0.6); opacity: 0; }
+        20% { opacity: 1; }
+        100% { transform: translateY(-10vh) scale(1.3); opacity: 0; }
+    }
+</style>
 </head>
 <body>
 
 <div class="card">
     <h1>Happy Anniversary my love 🫀</h1>
-    <span class="date">3.5.2026</span>
-    <p>Every year, you are my husband — my love and my safety.</p>
+    <div class="date">3.5.2026</div>
+    <p>Every year, you are my husband — my love and my safe place.</p>
     <p>Every year, you are my dream and my wish come true.</p>
     <p>Every year, you are my life and the most amazing man in the world.</p>
     <p>May we have many beautiful years together and grow together.</p>
@@ -97,11 +90,11 @@
         kiss.innerText = "💋";
         kiss.style.left = Math.random() * 100 + "vw";
         kiss.style.animationDuration = (3 + Math.random() * 3) + "s";
-        kiss.style.fontSize = (30 + Math.random() * 40) + "px";
+        kiss.style.fontSize = (30 + Math.random() * 20) + "px";
         document.body.appendChild(kiss);
         setTimeout(() => { kiss.remove(); }, 6000);
     }
-    setInterval(createKiss, 300);
+    setInterval(createKiss, 250);
 </script>
 
 </body>
